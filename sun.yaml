@@ -1,0 +1,15 @@
+---
+- hosts: linux
+  vars_prompt:
+       - name : Name_of_student
+         prompt: " Enter a Name"
+       - name: Age
+         promt: "Enter Age"
+  tasks:
+      - name: print name
+        debug:
+              msg: " Name of the student is {{ Name_of_student }}"
+
+      - name: print age
+        debug:
+              msg: Student Age is "{{ Age }}"
